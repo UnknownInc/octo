@@ -1,0 +1,68 @@
+{
+  "name": "socketcluster-sample",
+  "description": "A sample SocketCluster app",
+  "version": "1.0.0",
+  "contributors": [
+    {
+      "name": "Jonathan Gros-Dubois",
+      "email": "grosjona@yahoo.com.au"
+    }
+  ],
+  "dependencies": {
+    "cache-manager": "^3.3.0",
+    "cache-manager-ioredis": "^2.1.0",
+    "cache-manager-memory-store": "^1.1.0",
+    "connect": "^3.6.6",
+    "eetase": "^4.0.0",
+    "express": "^4.16.3",
+    "firebase-admin": "^9.1.1",
+    "md5": "^2.3.0",
+    "morgan": "^1.7.0",
+    "sc-errors": "^2.0.1",
+    "scc-broker-client": "^8.0.0",
+    "serve-static": "^1.13.2",
+    "socketcluster-client": "^16.0.1",
+    "socketcluster-server": "^16.0.0",
+    "uuid": "^3.4.0"
+  },
+  "keywords": [
+    "websocket",
+    "server",
+    "realtime",
+    "cluster",
+    "scalable"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "deploy": "gcloud app deploy --image-url gcr.io/$PROJECT_ID/atmyplace:latest --quiet app.yaml",
+    "docker": "docker build -t gcr.io/$PROJECT_ID/atmyplace:latest .",
+    "build": "babel src -d build",
+    "buildweb": "cd uiapp && npm run build",
+    "dev": "nodemon -r dotenv/config --exec babel-node src/server.js",
+    "start": "node build/server.js"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "nodemon": "^2.0.4"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}

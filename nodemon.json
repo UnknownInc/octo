@@ -1,0 +1,14 @@
+{
+  "ignore": [
+    ".git",
+    "public/*",
+    "uiapp/*",
+    "node_modules/**/node_modules"
+  ],
+  "execMap": {
+    "js": "babel-node -r dotenv/config"
+  },
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

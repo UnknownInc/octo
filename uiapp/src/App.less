@@ -1,0 +1,54 @@
+// @import '~antd/dist/antd.less';
+
+.fillpage {
+  min-height: 100vh;
+}
+
+.page{
+  overflow:'scroll';
+  box-sizing: 'border-box';
+  flex-grow:1;
+  position:'relative';
+}
+.centeredcol{
+  flex-grow:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.centeredrow{
+  flex-grow:1;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+}
+
+.connector {
+	fill:none;
+	stroke:#337ab7; // #dadada
+	stroke-width:2;
+	-webkit-box-shadow: 6px 6px 28px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 6px 6px 28px -2px rgba(0,0,0,0.75);
+	box-shadow: 6px 6px 28px -2px rgba(0,0,0,0.75);
+	    -webkit-filter: drop-shadow( -5px -5px 5px #000 );
+            filter: drop-shadow( -5px -5px 5px #000 );
+}
+
+.connector-click-area {
+	cursor: pointer;
+	fill:none;
+	stroke:transparent;
+	stroke-width:15;
+}
+
+.connector-click-area:hover + .connector,
+.connector:hover {
+	cursor: pointer;
+	stroke-width: 4;
+}
+
+.connector.selected {
+	stroke: #f3af1e;
+}
