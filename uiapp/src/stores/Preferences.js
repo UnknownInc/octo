@@ -16,8 +16,8 @@ export default class Preferences {
   @observable snapWidth=1;
 
   @observable canvasScale=1;
-  @observable canvasWidth=1920;
-  @observable canvasHeight=1080;
+  @observable canvasWidth=1920*2;
+  @observable canvasHeight=1080*2;
 
   @observable showGrid=true;
   @observable gridColor='#eee';

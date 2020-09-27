@@ -264,7 +264,7 @@ const NodeCanvas= observer(() => {
       <div ref={menuAnchorEl} style={{position:'absolute',top:pos.y,left:pos.x, width:4, height:4, backgroundColor:'transparent'}}></div>
 
       {/* connectors */}
-      <SVGComponent>
+      <SVGComponent scale={preferences.canvasScale} width={preferences.canvasWidth} height={preferences.canvasHeight}>
         {doc.connections.map(cn=>{
           const sn=doc.nodes.filter(n=>n.id==cn.fromId)[0];
           const en=doc.nodes.filter(n=>n.id==cn.toId)[0];
