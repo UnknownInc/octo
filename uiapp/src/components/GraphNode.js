@@ -79,7 +79,7 @@ const useStyles = makeStyles((_theme) => ({
     borderTop: '0.5em solid transparent',
     borderBottom: '0.5em solid transparent',
     
-    borderLeft: '0.5em solid #f1f1f1',
+    borderLeft: '0.5em solid #999',
     cursor:'e-resize'
   },
   
